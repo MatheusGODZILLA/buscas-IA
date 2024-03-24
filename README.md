@@ -25,7 +25,7 @@ Neste repositório, encontram-se implementações em JavaScript de algoritmos de
 
 O modelo que construi segue o exemplo passado em sala de aula, mais precisamente o clássico mapa da Romênia:
 <p align="center">
-  <img src="https://github.com/MatheusGODZILLA/buscas-IA/assets/76749048/f0bed31b-07a1-47f1-a55b-d89a9535405b" alt="Descrição da imagem">
+  <img src="https://github.com/MatheusGODZILLA/buscas-IA/assets/76749048/f0bed31b-07a1-47f1-a55b-d89a9535405b" alt="Mapa da Romênia">
 </p>
 
 
