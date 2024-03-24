@@ -23,6 +23,12 @@ Neste repositório, encontram-se implementações em JavaScript de algoritmos de
 
 ## Estrutura do Código
 
+O modelo que construi segue o exemplo passado em sala de aula, mais precisamente o clássico mapa da Romênia:
+<p align="center">
+  <img src="https://github.com/MatheusGODZILLA/buscas-IA/assets/76749048/f0bed31b-07a1-47f1-a55b-d89a9535405b" alt="Descrição da imagem">
+</p>
+
+
 Para modelar o problema, utilizei uma abordagem baseada em grafos. Cada nó do grafo é representado por uma classe `Cidade`, que contém informações sobre o estado do nó e uma lista de vizinhos para representar as conexões com outros nós. Essa classe contém variações para atender cada algoritmo em específico quando necessário.
 
 ```js
