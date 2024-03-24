@@ -136,7 +136,7 @@ function buscaEmProfundidadeLimitada(inicio, objetivo, limiteProfundidade) {
 }
 
 // Execução da busca em profundidade limitada
-resultado = buscaEmProfundidadeLimitada(arad, oradea, 2);
+resultado = buscaEmProfundidadeLimitada(arad, zerind, 2);
 
 if (resultado !== null) {
     console.log("Caminho encontrado!");
