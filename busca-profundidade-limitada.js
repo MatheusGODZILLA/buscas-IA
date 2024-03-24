@@ -101,6 +101,7 @@ iasi.adicionarVizinho(neamt);
 
 neamt.adicionarVizinho(iasi);
 
+// Função de busca em profundidade limitada
 function buscaEmProfundidadeLimitada(inicio, objetivo, limiteProfundidade) {
     let pilha = []; // pilha para os nós a serem verificados
     let visitados = new Set(); // conjunto para manter o controle dos nós já visitados
