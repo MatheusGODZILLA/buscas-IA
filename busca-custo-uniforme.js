@@ -1,3 +1,4 @@
+// Classe Cidade que representa um nó
 class Cidade {
     nome;
     vizinhos;
@@ -12,7 +13,7 @@ class Cidade {
     }
 }
 
-// Criação da árvore
+// Criação do grafo
 const arad = new Cidade("Arad");
 const zerind = new Cidade("Zerind");
 const oradea = new Cidade("Oradea");
@@ -102,7 +103,7 @@ iasi.adicionarVizinho(neamt, 87);
 neamt.adicionarVizinho(iasi, 87);
 
 // Função de custo uniforme
-function buscaDeCustoUniforme(origem, destino) {
+function buscaDeCustoUniforme(origem, objetivo) {
     const borda = [{ cidade: origem, caminho: [origem], custo: 0 }]; 
     const visitados = new Set();
 
@@ -111,7 +112,7 @@ function buscaDeCustoUniforme(origem, destino) {
 
         const { cidade, caminho, custo } = borda.shift(); // Escolher o nó com menor custo e remover da borda
 
-        if (cidade === destino) {
+        if (cidade === objetivo) {
             return { caminho: caminho.map(c => c.nome), custo };
         }
 
@@ -128,7 +129,7 @@ function buscaDeCustoUniforme(origem, destino) {
     return null;
 }
 
-// Execução da busca
+// Execução da busca de custo uniforme
 resultado = buscaDeCustoUniforme(sibiu, bucharest);
 
 if (resultado !== null) {

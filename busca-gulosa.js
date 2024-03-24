@@ -1,3 +1,4 @@
+// Classe Cidade que representa um nó
 class Cidade {
     nome;
     distanciaObjetivo;
@@ -14,7 +15,7 @@ class Cidade {
     }
 }
 
-// Criação da árvore
+// Criação do grafo
 const arad = new Cidade("Arad", 366);
 const zerind = new Cidade("Zerind", 374);
 const oradea = new Cidade("Oradea", 380);
@@ -109,7 +110,7 @@ function buscaGulosa(inicio, objetivo) {
     let caminho = [inicio.nome]; // Inicia o caminho com a cidade inicial
 
     while (atual !== objetivo) {
-        let menorDistancia = Infinity; // Inicializa com infinito
+        let menorDistancia = Infinity; // Inicializa com infinito para garantir que a primeira cidade visitada será a mais próxima do objetivo
         let proximaCidade = null;
 
         atual.vizinhos.forEach(vizinho => { // Itera sobre os vizinhos da cidade atual
@@ -120,7 +121,6 @@ function buscaGulosa(inicio, objetivo) {
         });
 
         if (proximaCidade === null) {
-            console.log("Não foi possível encontrar um caminho até o objetivo.");
             return null;
         }
 

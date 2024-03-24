@@ -1,3 +1,4 @@
+// Classe Cidade que representa um nó
 class Cidade {
     nome;
     vizinhos;
@@ -12,7 +13,7 @@ class Cidade {
     }
 }
 
-// Criação da árvore
+// Criação do grafo
 const arad = new Cidade("Arad");
 const zerind = new Cidade("Zerind");
 const oradea = new Cidade("Oradea");
@@ -101,6 +102,7 @@ iasi.adicionarVizinho(neamt);
 
 neamt.adicionarVizinho(iasi);
 
+// Função de busca em profundidade limitada
 function buscaEmProfundidadeLimitada(inicio, objetivo, limiteProfundidade) {
     let pilha = []; 
     let visitados = new Set(); 
@@ -132,8 +134,9 @@ function buscaEmProfundidadeLimitada(inicio, objetivo, limiteProfundidade) {
     return false;
 }
 
+// Função de busca em profundidade iterativa
 function buscaProfundidadeIterativa(inicio, objetivo) {
-    let limiteProfundidade = 0; // inicializa o limite de profundidade
+    let limiteProfundidade = 0; // Inicializa o limite de profundidade
 
     while (true) {
         console.log(`Tentando com limite de profundidade: ${limiteProfundidade}`);
@@ -150,6 +153,7 @@ function buscaProfundidadeIterativa(inicio, objetivo) {
     }
 }
 
+// Execução da busca em profundidade iterativa
 resultado = buscaProfundidadeIterativa(arad, bucharest);
 
 if (resultado) {

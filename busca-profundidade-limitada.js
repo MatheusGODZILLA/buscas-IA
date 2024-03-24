@@ -1,3 +1,4 @@
+// Classe Cidade que representa um nó
 class Cidade {
     nome;
     vizinhos;
@@ -12,7 +13,7 @@ class Cidade {
     }
 }
 
-// Criação da árvore
+// Criação do grafo
 const arad = new Cidade("Arad");
 const zerind = new Cidade("Zerind");
 const oradea = new Cidade("Oradea");
@@ -103,8 +104,8 @@ neamt.adicionarVizinho(iasi);
 
 // Função de busca em profundidade limitada
 function buscaEmProfundidadeLimitada(inicio, objetivo, limiteProfundidade) {
-    let pilha = []; // pilha para os nós a serem verificados
-    let visitados = new Set(); // conjunto para manter o controle dos nós já visitados
+    let pilha = []; 
+    let visitados = new Set();
 
     pilha.push({ no: inicio, profundidade: 0 }); // adiciona o nó inicial à pilha com profundidade 0
     visitados.add(inicio); // marca o nó inicial como visitado
@@ -114,7 +115,7 @@ function buscaEmProfundidadeLimitada(inicio, objetivo, limiteProfundidade) {
 
         console.log(`Visitando a cidade: ${no.nome}`);
 
-        if (no.nome === objetivo.nome) { // se o nó é o objetivo, termina a busca
+        if (no.nome === objetivo.nome) {
             console.log(`Encontrou o objetivo: ${no.nome}`);
             return;
         }

@@ -1,3 +1,4 @@
+// Classe Cidade que representa um nó
 class Cidade {
     nome;
     vizinhos;
@@ -12,7 +13,7 @@ class Cidade {
     }
 }
 
-// Criação da árvore
+// Criação do grafo
 const arad = new Cidade("Arad");
 const zerind = new Cidade("Zerind");
 const oradea = new Cidade("Oradea");
@@ -103,8 +104,8 @@ neamt.adicionarVizinho(iasi);
 
 // Função da busca em largura
 function buscaEmLargura(inicio, objetivo) {
-    let fila = []; // fila para os nós a serem verificados
-    let visitados = new Set(); // conjunto para manter o controle dos nós já visitados
+    let fila = []; 
+    let visitados = new Set();
 
     fila.push(inicio); // adiciona o nó inicial à fila
     visitados.add(inicio); // marca o nó inicial como visitado
@@ -130,7 +131,7 @@ function buscaEmLargura(inicio, objetivo) {
     return null;
 }
 
-// Execução da busca
+// Execução da busca em largura
 resultado = buscaEmLargura(arad, bucharest);
 
 if (resultado !== null) {

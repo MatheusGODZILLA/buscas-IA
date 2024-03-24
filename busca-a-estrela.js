@@ -1,3 +1,4 @@
+// Classe Cidade que representa um nó
 class Cidade {
     nome;
     distanciaObjetivo;
@@ -14,7 +15,7 @@ class Cidade {
     }
 }
 
-// Criação da árvore
+// Criação do grafo
 const arad = new Cidade("Arad", 366);
 const zerind = new Cidade("Zerind", 374);
 const oradea = new Cidade("Oradea", 380);
