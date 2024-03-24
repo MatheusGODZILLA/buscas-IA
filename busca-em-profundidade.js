@@ -127,8 +127,14 @@ function buscaEmProfundidade(inicio, objetivo) {
             }
         }
     }
-    console.log('Objetivo não encontrado');
+    return null;
 }
 
 // Execução da busca
-buscaEmProfundidade(arad, bucharest);
+resultado = buscaEmProfundidade(arad, bucharest);
+
+if (resultado !== null) {
+    console.log("Caminho encontrado!");
+} else {
+    console.log("Caminho não encontrado!");
+}

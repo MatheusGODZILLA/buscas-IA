@@ -127,8 +127,14 @@ function buscaEmLargura(inicio, objetivo) {
             }
         }
     }
-    console.log('Objetivo não encontrado');
+    return null;
 }
 
 // Execução da busca
-buscaEmLargura(arad, bucharest);
+resultado = buscaEmLargura(arad, bucharest);
+
+if (resultado !== null) {
+    console.log("Caminho encontrado!");
+} else {
+    console.log("Caminho não encontrado!");
+}
